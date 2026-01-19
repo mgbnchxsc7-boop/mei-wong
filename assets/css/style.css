@@ -20,6 +20,11 @@ h2 {
     color: #184f63; /* dark-blue */
 }
 
+.sharp-corners,
+.sharp-corners * {
+    border-radius: 0;
+}
+
 /* About Section */
 #about {
     background-color: white;
@@ -28,6 +33,19 @@ h2 {
 /* Portfolio */
 #portfolio {
     background-color: #dbdcde; /* light grey */
+}
+
+#portfolio .card-title {
+    color: #1f7798; /* mid-blue */
+    font-size: 1.2rem;
+}
+
+#portfolio .btn-outline-secondary:hover {
+    background-color: #1f7798; /* mid-blue */
+}
+
+#portfolio .card-text {
+    min-height: 120px;
 }
 
 /* Contact Section */
@@ -44,3 +62,15 @@ h2 {
     min-height: 500px;
     padding: 5% 7%;
 }
+
+/* Media Queries */
+
+/* Use Bootstrap breakpoints for XL screens */
+
+@media screen and (min-width:1200px) {
+    /* Fixes all portfolio cards being too tall on xl screens */
+    #portfolio .card-text {
+        min-height: auto;
+}
+}
+    
